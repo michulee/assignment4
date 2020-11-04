@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+/* https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width */
+/* Fix card image dimensions and aspect ratio */
+.card-img-top {
+    /* width and height makes even dimensions */
+    width: 100%;
+    height: 40vh;
+    /* cover keeps aspect ratio of photo and crops it */
+    object-fit: cover;
+}

@@ -17,3 +17,59 @@
     height: 50vh;
     /* object-fit: cover; */
 }
+
+h2 {
+    text-align: center;
+}
+
+.col-sm {
+    display: flex;
+    justify-content: center;
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.container-cover-center {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.container-wrapper {
+    width: 30%;
+}
+
+.container-wrapper > * {
+    margin: 1em;
+}
+
+.centered {
+    text-align: center;
+}
+
+.featured-title {
+    margin: 1em;
+    text-align: center;
+}
+
+.cover {
+    background-image: url('../img/about.jpg');
+    background-size: cover;
+    background-position-y: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-text {
+    color: white;
+}
+
+.cover-text {
+    font-size: 48px;
+}

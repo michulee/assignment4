@@ -73,3 +73,11 @@ h2 {
 .cover-text {
     font-size: 48px;
 }
+
+#profile-pic {
+    border-radius: 50%;
+}
+
+.navbar .navbar-collpase button {
+    
+}

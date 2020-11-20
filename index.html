@@ -8,14 +8,17 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
         integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/main.css">
+
+    <link rel="icon" href="favicon/cookie/favicon.ico" type="image/gif" sizes="16x16">
 </head>
 
 <body>
     <!-- Navbar Component -->
-    <div class="header-container"></div>
-
-    <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container"><a class="navbar-brand" href="index.html">Cooking Cards</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,94 +27,77 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="gallery.html">Browse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <span class="navbar-text">
+                <div id="login-authentication">
                     <a href="login.html"><button type="button" class="btn btn-outline-primary">Login/Register</button></a>
-                </span>
+                </div>
+                <!-- <div id="login-authentication">
+                    <a href="profile.html"><img src="img/profile.png" class="profile-icon" alt="profile"></a>
+                </div> -->
             </div>
         </div>
-    </nav> -->
-    <div class="container">
-        <!-- Carousel Component -->
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/cookies.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/poke.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/wings.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+    </nav>
 
+    <!-- Banner -->
+    <div class="banner">
+        <h1 class="banner-title">Cooking Cards</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
         <h2 class="featured-title">Featured Recipes</h2>
         <!-- Card Component -->
         <div class="row">
             <div class="col-sm">
                 <div class="card" style="width: 18rem;">
+                    <img src="img/cookies.jpg" class="card-img-top" alt="by Sara Sperry">
+                    <div class="card-body">
+                        <h5 class="card-title">Cookies</h5>
+                        <p class="card-text">Soft, delicious cookies with large chunks of dark chocolate.</p>
+                    </div>
+                    <div class="grid-icon-container"><button id="favorite" class="material-icons">favorite_border</button></div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
                     <img src="img/poke.jpg" class="card-img-top" alt="by Food Photographer David Fedulov">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Poke</h5>
+                        <p class="card-text">Poke with fresh salmon and other ingredients on top of a steaming bed of rice.</p>
                     </div>
+                    <div class="grid-icon-container"><button id="favorite" class="material-icons">favorite_border</button></div>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="card" style="width: 18rem;">
                     <img src="img/wings.jpg" class="card-img-top" alt="by George Zheng">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Wings</h5>
+                        <p class="card-text">Chicken wings marinated in KBBQ sauce glistening with juices and ready to give you a kick.</p>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/cookies.jpg" class="card-img-top" alt="by Sara Sperry">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
+                    <div class="grid-icon-container"><button id="favorite" class="material-icons">favorite_border</button></div>
                 </div>
             </div>
         </div>
+    </div>
 
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="social-media">
+                <a href="https://www.facebook.com/" title="FaceBook"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </div>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -121,14 +107,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
-
-    <!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-
     <script src="js/main.js"></script>
-    <script src="components/header.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

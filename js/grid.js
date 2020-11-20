@@ -1,18 +1,4 @@
-// Data
-var url = ['parks/joshua.html', 'parks/redwood.html', 'parks/yosemite.html'];
-var imageURL = ["cookies.jpg", "poke.jpg", "wings.jpg"];
-var title = ["Cookies", "Poke", "Wings"];
-var desc = [
-    "Poke with fresh salmon and other ingredients on top of a steaming bed of rice.",
-    "Chicken wings marinated in KBBQ sauce glistening with juices and ready to give you a kick.",
-    "Soft, delicious cookies with large chunks of dark chocolate."];
-let login = false;
-
-// Initial
-var imageIndex = 0;
-
-// Grid
-var grid = document.querySelectorAll('.card img');
+var grid = document.querySelectorAll('.grid-item img');
 
 let gridSrc = []; //grid src attributes
 for(let i = 0; i < grid.length; i++) {
@@ -22,6 +8,15 @@ for(let i = 0; i < grid.length; i++) {
 let gridFav = []; //grid fav buttons
 for(let i = 0; i < grid.length; i++) {
     gridFav[i] = document.getElementById('favorite');
+}
+
+// Click on image from grid and redirect to details page
+function redirect() {
+    for(let i = 0; i < grid.length; i++) {
+        grid[i].addEventListener('click', function() {
+            pushParameters(i);
+        });
+    }
 }
 
 //Toggle Favorite Button and attach cookie to buttons
@@ -41,6 +36,7 @@ for(let i = 0; i < heartIcon.length; i++) {
 }
 
 // run functions here
+redirect();
 console.log(document.cookie);
 checkCookie('favorite_image');
 
@@ -73,7 +69,7 @@ function setCookie(key, value) {
  */
 function setCookie(key, value, boolean) {
     if(boolean) {
-        return document.cookie = key + '=;expires=Thu, 01 Dec 2020 00:00:00 UTC;';
+        return document.cookie = key + '=;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
     } else {
         return document.cookie = key + '=' + value + ';';
     }
@@ -106,9 +102,5 @@ function getCookieValue(cookie) {
     let cookieValue = cookie.substr(valuePos + 1, cookie.length-2);
     return cookieValue;
 }
-
-
-
-
 
 

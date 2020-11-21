@@ -46,21 +46,6 @@ h2 {
     text-align: center;
 }
 
-.featured-title {
-    margin: 1em;
-    text-align: center;
-}
-
-.cover {
-    background-image: url('../img/about.jpg');
-    background-size: cover;
-    background-position-y: center;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .white-text {
     color: white;
 }
@@ -73,6 +58,23 @@ h2 {
     border-radius: 50%;
 }
 
+/* Featured */
+.featured-title {
+    margin: 1em;
+    text-align: center;
+}
+
+/* About */
+.cover {
+    background-image: url('../img/about.jpg');
+    background-size: cover;
+    background-position-y: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Navbar */
 .nav-item .nav-link:hover {
     color: salmon !important;
@@ -82,7 +84,7 @@ h2 {
 .banner {
     /* ../ because img on server only shows up with /, and gh shows up without / */
     background-image: url('../img/cooking-kit.jpg'); 
-    height: 60vh;
+    height: 30vh;
     background-color: pink;
     display: flex;
     justify-content: center;
@@ -118,8 +120,6 @@ button {
     color: pink;
 }
 
-
-
 /* Footer */
 .footer {
     background-color: #F8F9FA;
@@ -147,14 +147,30 @@ button {
     color: salmon;
 }
 
-/* Toggle Elements */
-.toggle-off {
-    display: none;
-}
-
 /* Profile */
 .profile-icon {
     width: 50px;
     border: 1px solid rgb(212, 212, 212);
     border-radius: 50%;
 }
+
+/* Search Bar */
+.navbar .search-bar {
+    width: 40%;
+    border: 1px solid gray;
+    margin: 0 1em;
+    padding: 5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+.navbar #search {
+    border-width: 0;
+    width: 100%;
+    margin: 0 5px;
+    background: #EEEEEE;
+    outline: none;
+}
+
+

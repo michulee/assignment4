@@ -1,23 +1,20 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cooking Cards</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
         integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/main.css">
 
     <link rel="icon" href="favicon/cookie/favicon.ico" type="image/gif" sizes="16x16">
 </head>
-
 <body>
-    <!-- Navbar Component -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container"><a class="navbar-brand" href="index.html">Cooking Cards</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -36,58 +33,18 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input id="search" type="text" placeholder="Search for cooking recipes"></div>
-                </div>
                 <div id="login-authentication">
-                    <a href="login.html"><button type="button"
-                            class="btn btn-outline-primary">Login/Register</button></a>
+                    <a href="login.html"><button type="button" class="btn btn-outline-primary">Login/Register</button></a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Banner -->
-    <div class="banner">
-        <h1 class="banner-title">Cooking Cards</h1>
-    </div>
-
-    <!-- Content -->
-    <div class="container featured">
+    <!-- Contents -->
+    <div class="container">
         <h2 class="featured-title">Featured Recipes</h2>
         <!-- Card Component -->
-        <div class="row">
-            <div class="card mb-3" style="max-width: 50%">
-                <div class="row no-gutters no-border">
-                    <div class="col-md-8 img-wrapper">
-                        <img src="img/breakfast.jpg" class="card-img" alt="breakfast">
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Breakfast</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3" style="max-width: 50%">
-                <div class="row no-gutters">
-                    <div class="col-md-8">
-                        <img src="img/poke.jpg" class="card-img" alt="poke">
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Poke</h5>
-                            <p class="card-text">Poke with fresh salmon and other ingredients on top of a steaming bed of
-                                rice.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="row">
+        <div class="row row-cols-md-4">
             <div class="col-sm">
                 <div class="card" style="width: 18rem;">
                     <img src="img/cookies.jpg" class="card-img-top" alt="by Sara Sperry">
@@ -118,16 +75,25 @@
                     <div class="grid-icon-container"><button id="favorite" class="material-icons">favorite_border</button></div>
                 </div>
             </div>
-        </div> -->
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="social-media">
-                <a href="https://www.facebook.com/" title="FaceBook"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.youtube.com/" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/burger.jpg" class="card-img-top" alt="by Food Photographer David Fedulov">
+                    <div class="card-body">
+                        <h5 class="card-title">Burger</h5>
+                        <p class="card-text">A juicy bacon and beef burger with melting cheese and fresh lettuce.</p>
+                    </div>
+                    <div class="grid-icon-container"><button id="favorite" class="material-icons">favorite_border</button></div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/breakfast.jpg" class="card-img-top" alt="by George Zheng">
+                    <div class="card-body">
+                        <h5 class="card-title">Eggs & Vegetables</h5>
+                        <p class="card-text">A satisfying and balanced meal with protein, vegetables and fat.</p>
+                    </div>
+                    <div class="grid-icon-container"><button id="favorite" class="material-icons">favorite_border</button></div>
+                </div>
             </div>
         </div>
     </div>
@@ -139,8 +105,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
-    <script src="js/main.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/contact.js"></script>
 </body>
-
 </html>

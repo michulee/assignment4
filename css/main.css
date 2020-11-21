@@ -78,9 +78,10 @@ h2 {
     color: salmon !important;
 }
 
-/* Banner */
+/* Home Banner */
 .banner {
-    background-image: url('/img/cooking-kit.jpg');
+    /* ../ because img on server only shows up with /, and gh shows up without / */
+    background-image: url('../img/cooking-kit.jpg'); 
     height: 60vh;
     background-color: pink;
     display: flex;

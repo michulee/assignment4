@@ -13,41 +13,11 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Favicon -->
     <link rel="icon" href="favicon/cookie/favicon.ico" type="image/gif" sizes="16x16">
 </head>
 
 <body>
-    <!-- Navbar Component -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <div class="container"><a class="navbar-brand" href="index.html">Cooking Cards</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="browse.html">Browse</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input id="search" type="text" placeholder="Search for cooking recipes"></div>
-                </div>
-                <div id="login-authentication">
-                    <a href="login.html"><button type="button"
-                            class="btn btn-outline-primary">Login/Register</button></a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
     <!-- Banner -->
     <div class="banner">
         <h1 class="banner-title">Cooking Cards</h1>
@@ -121,17 +91,6 @@
         </div> -->
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="social-media">
-                <a href="https://www.facebook.com/" title="FaceBook"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.youtube.com/" title="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </div>
-
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -141,6 +100,8 @@
     </script>
     <script src="js/main.js"></script>
     <script src="js/login.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
 </body>
 
 </html>

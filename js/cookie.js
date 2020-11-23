@@ -1,13 +1,3 @@
-
-// Variables
-const url = ['parks/joshua.html', 'parks/redwood.html', 'parks/yosemite.html'];
-const imageURL = ["cookies.jpg", "poke.jpg", "wings.jpg"];
-const title = ["Cookies", "Poke", "Wings"];
-const desc = [
-    "Poke with fresh salmon and other ingredients on top of a steaming bed of rice.",
-    "Chicken wings marinated in KBBQ sauce glistening with juices and ready to give you a kick.",
-    "Soft, delicious cookies with large chunks of dark chocolate."];
-
 // Selectors
 var grid = document.querySelectorAll('.card img');
 

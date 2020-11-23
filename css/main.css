@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100vh;
+    position: relative;
+}
+
 /* https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width */
 /* Fix card image dimensions and aspect ratio */
 .card-img-top {
@@ -22,10 +27,11 @@ h2 {
     justify-content: center;
 }
 
-.container-center {
+.container-100 {
+    height: 80vh;
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding-top: 10%;
 }
 
 .container-cover-center {
@@ -59,7 +65,7 @@ h2 {
 }
 
 /* Featured */
-.featured-title {
+.product-title {
     margin: 1em;
     text-align: center;
 }
@@ -128,6 +134,7 @@ button {
 .footer .container {
     display: flex;
     justify-content: center;
+
 }
 .social-media {
     width: 100px;

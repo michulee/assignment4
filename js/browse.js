@@ -10,9 +10,10 @@ const desc = [
     "A satisfying and balanced meal with protein, vegetables and fat."];
 
 const productRow = document.querySelector('.product .row');
-const card = '';
+// const card outside won't let images render
+// const card = '';
 for(let i = 0; i < title.length; i++) {
-    card = `
+    const card = `
     <div class="col-sm">
         <div class="card" style="width: 18rem;">
             <img src="../img/${imageURL[i]}" class="card-img-top" alt="by Sara Sperry">

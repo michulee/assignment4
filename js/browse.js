@@ -16,7 +16,7 @@ for(let i = 0; i < title.length; i++) {
     const card = `
     <div class="col-sm">
         <div class="card" style="width: 18rem;">
-            <img src="../img/${imageURL[i]}" class="card-img-top" alt="by Sara Sperry">
+            <img src="img/${imageURL[i]}" class="card-img-top" alt="by Sara Sperry">
             <div class="card-body">
                 <h5 class="card-title">${title[i]}</h5>
                 <p class="card-text">${desc[i]}</p>

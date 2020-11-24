@@ -1,15 +1,15 @@
 // Selectors
 var grid = document.querySelectorAll('.card img');
 
-let gridSrc = []; //grid src attributes
+let imgSrc = [];
 for(let i = 0; i < grid.length; i++) {
-    gridSrc[i] = grid[i].getAttribute('src');
+    imgSrc[i] = grid[i].getAttribute('src');
 }
 
-let gridFav = []; //grid fav buttons
-for(let i = 0; i < grid.length; i++) {
-    gridFav[i] = document.getElementById('favorite');
-}
+let gridFav = document.querySelectorAll('#favorite');
+// for(let i = 0; i < grid.length; i++) {
+//     gridFav[i] = document.getElementById('favorite');
+// }
 
 let heartIcon = document.querySelectorAll('#favorite');
 
@@ -40,7 +40,7 @@ export function checkCookie(key) {
     for (let i = 0; i < splitCookie.length; i++) {
         cookieValue = getCookieValue(splitCookie[i]);
         for (let i = 0; i < grid.length; i++) {
-            if (gridSrc[i].includes(cookieValue)) {
+            if (imgSrc[i].includes(cookieValue)) {
                 heartIcon[i].innerHTML = 'favorite';
                 heartIcon[i].style.color = 'red';
             } 

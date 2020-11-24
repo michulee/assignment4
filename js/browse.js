@@ -3,16 +3,17 @@
 const imageURL = ["cookies.jpg", "poke.jpg", "wings.jpg", "burger.jpg", "breakfast.jpg"];
 const title = ["Cookies", "Poke", "Wings", "Burger", "Eggs & Vegetables"];
 const desc = [
+    "Soft, delicious cookies with large chunks of dark chocolate.",
     "Poke with fresh salmon and other ingredients on top of a steaming bed of rice.",
     "Chicken wings marinated in KBBQ sauce glistening with juices and ready to give you a kick.",
-    "Soft, delicious cookies with large chunks of dark chocolate.",
     "A juicy bacon and beef burger with melting cheese and fresh lettuce.",
     "A satisfying and balanced meal with protein, vegetables and fat."];
 
 const productRow = document.querySelector('.product .row');
 // const card outside won't let images render
 // const card = '';
-for(let i = 0; i < title.length; i++) {
+// decrement because the first image rendered will be pushed to bottom not top, now cookies is first image to appear
+for(let i = title.length-1; i > -1; i--) {
     const card = `
     <div class="col-sm">
         <div class="card" style="width: 18rem;">

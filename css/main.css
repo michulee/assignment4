@@ -7,6 +7,9 @@ html, body {
     position: relative;
 }
 
+.navbar {
+}
+
 /* https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width */
 /* Fix card image dimensions and aspect ratio */
 .card-img-top {
@@ -25,6 +28,11 @@ h2 {
 .col-sm {
     display: flex;
     justify-content: center;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
 }
 
 .container-100 {
@@ -163,7 +171,7 @@ button {
 
 /* Search Bar */
 .navbar .search-bar {
-    width: 40%;
+    width: 100%;
     border: 1px solid gray;
     margin: 0 1em;
     padding: 5px;

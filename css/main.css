@@ -219,11 +219,13 @@ button {
         width: 100%;
     }
 }
+/* 2 columns */
 @media (min-width: 768px) and (max-width: 1024px) {
     .card {
         width: 50%;
     }
 }
+/* 4 columns */
 @media (min-width: 1025px) {
     .card {
         width: 25%;

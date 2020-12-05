@@ -2,7 +2,7 @@ const navbar = `
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="img/logo50x50.png"></a>
-            <form class="form-inline search-bar">
+            <form id="search-bar" class="form-inline search-bar">
                 <i class="fas fa-search"></i>
                 <input id="search" type="search" placeholder="Search for cooking recipes">
             </form>

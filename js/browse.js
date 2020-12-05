@@ -62,7 +62,7 @@ const productRow = document.querySelector('.product .row');
 // decrement because the first image rendered will be pushed to bottom not top, now cookies.jpg is first image to appear
 for(let i = recipe.length-1; i > -1; i--) {
     const card = `
-            <div class="card" style="min-width: 20rem;">
+            <div class="card">
                 <img src="./img/${recipe[i].imageURL}" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">${recipe[i].title}</h5>
@@ -76,13 +76,14 @@ for(let i = recipe.length-1; i > -1; i--) {
 }
 
 // user clicks
-window.onclick = function(e) {
-}
+// window.addEventListener("click", function(e) {
+//     console.log(e.currentTarget);
+//     console.log(e.target);
+// });
 // if click on image
 // get title
 // find index of title for data arrays
 // insert data at the index to recipeDetails template literal (need to design)
 
 // TODO:every 4 products, wrap in row class to get row gap
-
 

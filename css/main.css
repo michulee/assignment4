@@ -49,10 +49,18 @@ h2 {
 }
 
 .container-wrapper {
-    width: 30%;
+    width: 60%;
 }
 
 .container-wrapper>* {
+    margin: 1em;
+}
+
+.form-wrapper {
+    width: 40%;
+}
+
+.form-wrapper>* {
     margin: 1em;
 }
 
@@ -74,8 +82,13 @@ h2 {
 
 /* Featured */
 .product-title {
-    margin: 1em;
+    padding: 2em 0 1em 0;
     text-align: center;
+}
+
+/* Page 100vh */
+.page-100 {
+    height: 100vh;
 }
 
 /* About */
@@ -83,7 +96,7 @@ h2 {
     background-image: url('../img/about.jpg');
     background-size: cover;
     background-position-y: center;
-    height: 60vh;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,6 +106,8 @@ h2 {
 .nav-item .nav-link:hover {
     color: salmon !important;
 }
+
+
 
 /* Home Banner */
 .banner {
@@ -115,7 +130,7 @@ h2 {
 }
 .grid-icon-container {
     position: absolute;
-    right: 0;
+    right: 1em;
 }
 
 /* Button */
@@ -188,4 +203,30 @@ button {
     outline: none;
 }
 
+/* Carousel */
+.scroll-carousel {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+
+.scroll-carousel .card {
+    flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+    .card {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: 50%;
+    }
+}
+@media (min-width: 1025px) {
+    .card {
+        width: 25%;
+    }
+}
 

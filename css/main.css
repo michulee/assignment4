@@ -214,15 +214,22 @@ button {
     flex-shrink: 0;
 }
 
+/* 1 column */
 @media (max-width: 767px) {
     .card {
         width: 100%;
+    }
+    #search-bar {
+        width: 60%;
     }
 }
 /* 2 columns */
 @media (min-width: 768px) and (max-width: 1024px) {
     .card {
         width: 50%;
+    }
+    #search-bar {
+        width: 60%;
     }
 }
 /* 4 columns */

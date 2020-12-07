@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    position: relative;
+}
+
+.navbar {
+}
+
+/* https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width */
+/* Fix card image dimensions and aspect ratio */
+.card-img-top {
+    /* width and height makes even dimensions bc different image sizes*/
+    width: 100%;
+    height: 40vh;
+    /* cover keeps aspect ratio of photo and crops it */
+    object-fit: cover;
+}
+
+/* Structure */
+h2 {
+    text-align: center;
+}
+
+.col-sm {
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-100 {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-cover-center {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.container-wrapper {
+    width: 60%;
+}
+
+.container-wrapper>* {
+    margin: 1em;
+}
+
+.form-wrapper {
+    width: 40%;
+}
+
+.form-wrapper>* {
+    margin: 1em;
+}
+
+.centered {
+    text-align: center;
+}
+
+.white-text {
+    color: white;
+}
+
+.cover-text {
+    font-size: 48px;
+}
+
+#profile-pic {
+    border-radius: 50%;
+}
+
+/* Featured */
+.product-title {
+    padding: 2em 0 1em 0;
+    text-align: center;
+}
+
+/* Page 100vh */
+.page-100 {
+    height: 100vh;
+}
+
+/* About */
+.cover {
+    background-image: url('../img/about.jpg');
+    background-size: cover;
+    background-position-y: center;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+.nav-item .nav-link:hover {
+    color: salmon !important;
+}
+
+
+
+/* Home Banner */
+.banner {
+    /* ../ because img on server only shows up with /, and gh shows up without / */
+    background-image: url('../img/cooking-kit.jpg'); 
+    height: 30vh;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .banner-title {
+    color: white;
+}
+
+/* Cards */
+.card {
+    position: relative;
+}
+.grid-icon-container {
+    position: absolute;
+    right: 1em;
+}
+
+/* Button */
+button {
+    border: none;
+    background-color: transparent;
+    outline: none !important;
+}
+
+.material-icons {
+    font-size: 36px;
+    color: white;
+}
+
+.material-icons:hover {
+    color: pink;
+}
+
+/* Footer */
+.footer {
+    background-color: #F8F9FA;
+    margin-top: 2em;
+}
+.footer .container {
+    display: flex;
+    justify-content: center;
+
+}
+.social-media {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media i {
+    font-size: 36px;
+    margin: 0 10px;
+    color: black;
+}
+
+.social-media i:hover {
+    color: salmon;
+}
+
+/* Profile */
+.profile-icon {
+    width: 50px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 50%;
+}
+
+/* Search Bar */
+.navbar .search-bar {
+    width: 100%;
+    border: 1px solid gray;
+    margin: 0 1em;
+    padding: 5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+.navbar #search {
+    border-width: 0;
+    width: 100%;
+    margin: 0 5px;
+    background: #EEEEEE;
+    outline: none;
+}
+
+/* Carousel */
+.scroll-carousel {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+
+.scroll-carousel .card {
+    flex-shrink: 0;
+}
+
+/* 1 column */
+@media (max-width: 767px) {
+    .card {
+        width: 100%;
+    }
+    #search-bar {
+        width: 60%;
+    }
+}
+/* 2 columns */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: 50%;
+    }
+    #search-bar {
+        width: 60%;
+    }
+}
+/* 4 columns */
+@media (min-width: 1025px) {
+    .card {
+        width: 25%;
+    }
+}
+

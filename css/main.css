@@ -30,6 +30,20 @@ h2 {
     justify-content: center;
 }
 
+.col-1-4 {
+    width: 25%;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+.col-3-4 {
+    width: 75%;
+}
+
+
+
 .horizontal {
     display: flex;
     flex-direction: row;
@@ -201,6 +215,28 @@ button {
     margin: 0 5px;
     background: #EEEEEE;
     outline: none;
+}
+
+/* Recipe Details */
+.recipe-row {
+    margin-top: 5em;
+    display: flex;
+}
+
+.recipe-text-wrapper {
+    padding: 0 5em;
+}
+
+.img-wrapper {
+    position: relative;
+}
+
+.img-wrapper img {
+    width: 100%;
+}
+
+.img-wrapper .grid-icon-container {
+    top: 1em;
 }
 
 /* Carousel */

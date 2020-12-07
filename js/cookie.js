@@ -1,3 +1,5 @@
+import * as Data from './data.js';
+
 // Selectors
 var grid = document.querySelectorAll('.card img');
 
@@ -15,14 +17,14 @@ for(let i = 0; i < heartIcon.length; i++) {
         if(heartIcon[i].innerHTML == 'favorite_border') {
             heartIcon[i].innerHTML = 'favorite';
             heartIcon[i].style.color = 'red';
-            setCookie('favorite_image' + i, recipe[i].imageURL);
+            setCookie('favorite_image' + i, Data.recipe[i].imageURL);
         } 
         // when img is favorited set to unfavorite
         else {
             heartIcon[i].innerHTML = 'favorite_border';
             heartIcon[i].style.color = 'white';
             // remove cookie
-            setCookie('favorite_image' + i, recipe[i].imageURL, true);
+            setCookie('favorite_image' + i, Data.recipe[i].imageURL, true);
         }
     });
 }

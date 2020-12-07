@@ -1,4 +1,4 @@
- export const Navbar = `
+const navbar = `
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="img/logo50x50.png"></a>
@@ -22,14 +22,12 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="login.html"><button id="navLogin" type="button" class="btn btn-outline-primary">Login</button></a>
+                        <a href="login.html"><button type="button" class="btn btn-outline-primary">Login/Register</button></a>
                     </li>
                 </ul>
                 
             </div>
         </div>
     </nav>`;
-    document.body.insertAdjacentHTML('afterbegin', navbar);
 
-
-
+document.body.insertAdjacentHTML('afterbegin', navbar);

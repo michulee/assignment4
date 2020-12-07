@@ -1,4 +1,3 @@
-import * as Component from '../components/Navbar.js';
 const recipe = [
     {
         "id": "1",

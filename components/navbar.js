@@ -1,4 +1,4 @@
-const navbar = `
+const Navbar = `
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="img/logo50x50.png"></a>
@@ -30,4 +30,4 @@ const navbar = `
         </div>
     </nav>`;
 
-document.body.insertAdjacentHTML('afterbegin', navbar);
+document.body.insertAdjacentHTML('afterbegin', Navbar);

@@ -1,56 +1,67 @@
 import * as Component from '../components/Navbar.js';
 const recipe = [
     {
-        "title": "Cookies",
+        "id": "1",
+        "title": "Chocolate Chip Cookies",
         "imageURL": "cookies.jpg",
-        "desc": "Soft, delicious cookies with large chunks of dark chocolate."
+        "desc": "Soft, delicious cookies with large chunks of dark chocolate.",
     },
     {
-        "title": "Poke",
+        "id": "2",
+        "title": "Salmon Poke",
         "imageURL": "poke.jpg",
         "desc": "Poke with fresh salmon and other ingredients on top of a steaming bed of rice."
     },
     {
-        "title": "Wings",
+        "id": "3",
+        "title": "KBBQ Wings",
         "imageURL": "wings.jpg",
         "desc": "Chicken wings marinated in KBBQ sauce glistening with juices and ready to give you a kick."
     },
     {
-        "title": "Burger",
+        "id": "4",
+        "title": "Beef Burger",
         "imageURL": "burger.jpg",
         "desc": "A juicy bacon and beef burger with melting cheese and fresh lettuce."
     },
     {
-        "title": "Eggs & Vegetables",
+        "id": "5",
+        "title": "Deluxe Breakfast",
         "imageURL": "breakfast.jpg",
         "desc": "A satisfying and balanced meal with protein, vegetables and fat."
     },
     {
-        "title": "Pancakes",
+        "id": "6",
+        "title": "Mini Pancakes with Fruit",
         "imageURL": "pancakes.jpg",
         "desc": "Layered pancakes stacked with maple syrup, strawberries, blueberries, and diabetes."
     },
     {
+        "id": "7",
         "title": "Lasagna",
         "imageURL": "lasagna.jpg",
         "desc": "Pasta with cheesy layers that leave you 10 pounds heavier."
     },
     {
-        "title": "Macaron",
+        "id": "8",
+        "title": "Assorted Macarons",
         "imageURL": "macaron.jpg",
         "desc": "Color assorted macarons with a cream cheese center."
     },
     {
-        "title": "Soba Noodles",
+        "id": "9",
+        "title": "Soba Noodles with Fishcake",
         "imageURL": "soba.jpg",
         "desc": "Japanese soba noodles made from buckwheat flour that gives it a soft and chewy texture."
     },
     {
-        "title": "Pizza",
+        "id": "9",
+        "title": "Vege Pizza",
         "imageURL": "pizza.jpg",
         "desc": "Homemade pizza with mushrooms, red onion, tomatoes, green bell peppers, and red bell peppers."
     },
     {
+        "id": "10",
         "title": "Chocolate Strawberries",
         "imageURL": "chocolate-strawberries.jpg",
         "desc": "Juicy, red strawberries dipped in high-quality dark chocolate. Dark chocolate is best chocolate."
@@ -63,7 +74,7 @@ const productRow = document.querySelector('.product .row');
 // decrement because the first image rendered will be pushed to bottom not top, now cookies.jpg is first image to appear
 for(let i = recipe.length-1; i > -1; i--) {
     const card = `
-            <div class="card">
+            <div class="card" data-id="${recipe[i].id}">
                 <img src="./img/${recipe[i].imageURL}" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">${recipe[i].title}</h5>
@@ -76,18 +87,17 @@ for(let i = recipe.length-1; i > -1; i--) {
     productRow.insertAdjacentHTML('afterbegin', card);
 }
 
-const navbar = Component.Navbar;
-document.body.insertAdjacentHTML('afterbegin', navbar);
+window.addEventListener("click", function(e) {
+    const element = e.target;
+    const parentElement = element.parentElement;
+    const parentValue = parentElement.getAttribute('class')
+    if(parentValue === 'card') {
+        const data = parentElement.getAttribute('data-id');
+        window.location.href = window.location.hostname + window.location.pathname + '?product=' + parentValue;
+        // insert template literal
+    }
+});
 
-// user clicks
-// window.addEventListener("click", function(e) {
-//     console.log(e.currentTarget);
-//     console.log(e.target);
-// });
-// if click on image
-// get title
-// find index of title for data arrays
-// insert data at the index to recipeDetails template literal (need to design)
+const recipeDetails = `
 
-// TODO:every 4 products, wrap in row class to get row gap
-
+`;

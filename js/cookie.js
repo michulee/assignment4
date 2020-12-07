@@ -6,11 +6,6 @@ for(let i = 0; i < grid.length; i++) {
     imgSrc[i] = grid[i].getAttribute('src');
 }
 
-let gridFav = document.querySelectorAll('#favorite');
-// for(let i = 0; i < grid.length; i++) {
-//     gridFav[i] = document.getElementById('favorite');
-// }
-
 let heartIcon = document.querySelectorAll('#favorite');
 
 //Toggle Favorite Button and attach cookie to buttons
@@ -32,10 +27,13 @@ for(let i = 0; i < heartIcon.length; i++) {
     });
 }
 
-//Cookie remembers which image is favorited
+/**
+ * If cookie exists, a solid heart will appear.
+ * @param key Key of key-valuee pair
+ */
 export function checkCookie(key) {
     let cookieValue = '';
-    // only favorite_image cookies
+    // only cookies that include key 'favorite_image'
     let splitCookie = getSplitCookie(key);
     for (let i = 0; i < splitCookie.length; i++) {
         cookieValue = getCookieValue(splitCookie[i]);
@@ -44,18 +42,15 @@ export function checkCookie(key) {
                 heartIcon[i].innerHTML = 'favorite';
                 heartIcon[i].style.color = 'red';
             } 
-            // else {
-            //     heartIcon[i].innerHTML = 'favorite_border';
-            //     heartIcon[i].style.color = 'white';
-            // }
         }
     }
 }
 
 /**
- * Sets cookie for key, value and expiration and trims it
- * true to remove cookie
- * false or default set expiration date
+ * Sets cookie when user clicks on heart.
+ * @param key Key of key-value pair
+ * @param value Value of key-value pair
+ * @param deleteCookie Default false, true to delete cookie
  */
 export function setCookie(key, value, deleteCookie = false) {
     if (!deleteCookie) {

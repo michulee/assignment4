@@ -54,7 +54,7 @@ export function checkCookie(key) {
  */
 export function setCookie(key, value, deleteCookie = false) {
     if (!deleteCookie) {
-        return document.cookie = key + '=' + value + ';expires=Thu, 01 Dec 2020 00:00:00 UTC;';
+        return document.cookie = key + '=' + value + ';expires=Thu, 31 Dec 2020 00:00:00 UTC;';
     } else {
         return document.cookie = key + '=;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
     }

@@ -1,26 +1,9 @@
 // import * as Data from './data.js';
 
-
+// let heartIcon = document.querySelectorAll('#favorite');
 let heartIcon = document.querySelectorAll('#favorite');
-// console.log(heartIcon[0])
+console.log(heartIcon[0])
 checkCookie('favorite_image');
-
-// body .grid .row WORKS
-// body .grid .row .card DOESN'T WORK, can't go beyond .row 
-// can only select from where you define the template literal? so import cookie.js to browse.js?
-// or maybe instead of exporting data, just leave as global variable
-const select = document.querySelector('body');
-console.log(document)
-console.log(select)
-
-
-
-// why is it length 0?
-console.log(heartIcon.length)
-for (let i = 0; i < heartIcon.length; i++) {
-    console.log('hey')
-    console.log(heartIcon[i])
-}
 
 //Toggle Favorite Button and attach cookie to buttons
 for(let i = 0; i < heartIcon.length; i++) {
@@ -29,7 +12,6 @@ for(let i = 0; i < heartIcon.length; i++) {
         if(heartIcon[i].innerHTML == 'favorite_border') {
             heartIcon[i].innerHTML = 'favorite';
             heartIcon[i].style.color = 'red';
-            console.log(i)
             setCookie('favorite_image' + i, recipe[i].imageURL);
         } 
         // when img is favorited set to unfavorite

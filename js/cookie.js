@@ -1,13 +1,19 @@
-import * as Data from './data.js';
+// import * as Data from './data.js';
+
 
 let heartIcon = document.querySelectorAll('#favorite');
+// console.log(heartIcon[0])
+checkCookie('favorite_image');
 
 // body .grid .row WORKS
 // body .grid .row .card DOESN'T WORK, can't go beyond .row 
 // can only select from where you define the template literal? so import cookie.js to browse.js?
 // or maybe instead of exporting data, just leave as global variable
-const select = document.querySelector('.row h5');
+const select = document.querySelector('body');
+console.log(document)
 console.log(select)
+
+
 
 // why is it length 0?
 console.log(heartIcon.length)
@@ -24,14 +30,14 @@ for(let i = 0; i < heartIcon.length; i++) {
             heartIcon[i].innerHTML = 'favorite';
             heartIcon[i].style.color = 'red';
             console.log(i)
-            setCookie('favorite_image' + i, Data.recipe[i].imageURL);
+            setCookie('favorite_image' + i, recipe[i].imageURL);
         } 
         // when img is favorited set to unfavorite
         else {
             heartIcon[i].innerHTML = 'favorite_border';
             heartIcon[i].style.color = 'white';
             // remove cookie
-            setCookie('favorite_image' + i, Data.recipe[i].imageURL, true);
+            setCookie('favorite_image' + i, recipe[i].imageURL, true);
         }
     });
 }
@@ -40,16 +46,14 @@ for(let i = 0; i < heartIcon.length; i++) {
  * If cookie exists, a solid heart will appear.
  * @param key Key of key-valuee pair
  */
-export function checkCookie(key) {
+function checkCookie(key) {
     let cookieValue = '';
     // only cookies that include key 'favorite_image'
     let splitCookie = getSplitCookie(key);
     for (let i = 0; i < splitCookie.length; i++) {
         cookieValue = getCookieValue(splitCookie[i]);
-        for (let i = 0; i < Data.recipe.length; i++) {
-            if (Data.recipe[i].imageURL.includes(cookieValue)) {
-                console.log('work')
-                console.log(heartIcon[i])
+        for (let i = 0; i < recipe.length; i++) {
+            if (recipe[i].imageURL.includes(cookieValue)) {
                 heartIcon[i].innerHTML = 'favorite';
                 heartIcon[i].style.color = 'red';
             } 
@@ -63,7 +67,7 @@ export function checkCookie(key) {
  * @param value Value of key-value pair
  * @param deleteCookie Default false, true to delete cookie
  */
-export function setCookie(key, value, deleteCookie = false) {
+function setCookie(key, value, deleteCookie = false) {
     if (!deleteCookie) {
         return document.cookie = key + '=' + value + ';expires=Thu, 31 Dec 2020 00:00:00 UTC;';
     } else {
@@ -72,7 +76,7 @@ export function setCookie(key, value, deleteCookie = false) {
 }
 
 // Returns arr with cookies with only the key 'favorite_image'
-export function getSplitCookie(key) {
+function getSplitCookie(key) {
     let cookie = document.cookie;
     let splitCookies = cookie.split(';');
     let filteredCookies = [];
@@ -93,7 +97,7 @@ export function getSplitCookie(key) {
 
 // get value of 'favorite_image = joseph.jpg'
 // Get value of key-value cookie pair
-export function getCookieValue(cookie) {
+function getCookieValue(cookie) {
     let valuePos = cookie.indexOf('=');
     let cookieValue = cookie.substr(valuePos + 1, cookie.length - 2);
     return cookieValue;

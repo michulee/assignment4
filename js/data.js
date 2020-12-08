@@ -1,4 +1,4 @@
-export const recipe = [
+const recipe = [
     {
         "id": "1",
         "title": "Chocolate Chip Cookies",

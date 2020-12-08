@@ -1,8 +1,7 @@
 // import * as Data from './data.js';
 
 const productRow = document.querySelector('.product .row');
-// const card outside won't let images render
-// const card = '';
+
 // decrement because the first image rendered will be pushed to bottom not top, now cookies.jpg is first image to appear
 for(let i = recipe.length-1; i > -1; i--) {
     const card = `
@@ -25,10 +24,7 @@ window.addEventListener("click", function(e) {
     const parentValue = parentElement.getAttribute('class')
     if(parentValue === 'card') {
         const data = parentElement.getAttribute('data-id');
-        // window.location.href +='/recipeDetails.html?product=' + data;
-        // window.location.href ='?product=' + data;
         window.location.assign('../recipeDetails.html?product=' + data); 
-        // after redirect, stops reading code
     }
 });
 

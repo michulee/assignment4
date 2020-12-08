@@ -1,16 +1,3 @@
-// Selectors
-var grid = document.querySelectorAll('.card img');
-
-let imgSrc = [];
-for(let i = 0; i < grid.length; i++) {
-    imgSrc[i] = grid[i].getAttribute('src');
-}
-
-let gridFav = document.querySelectorAll('#favorite');
-// for(let i = 0; i < grid.length; i++) {
-//     gridFav[i] = document.getElementById('favorite');
-// }
-
 let heartIcon = document.querySelectorAll('#favorite');
 
 //Toggle Favorite Button and attach cookie to buttons
@@ -39,15 +26,11 @@ export function checkCookie(key) {
     let splitCookie = getSplitCookie(key);
     for (let i = 0; i < splitCookie.length; i++) {
         cookieValue = getCookieValue(splitCookie[i]);
-        for (let i = 0; i < grid.length; i++) {
-            if (imgSrc[i].includes(cookieValue)) {
+        for (let i = 0; i < recipe.length; i++) {
+            if (recipe[i].imageURL.includes(cookieValue)) {
                 heartIcon[i].innerHTML = 'favorite';
                 heartIcon[i].style.color = 'red';
             } 
-            // else {
-            //     heartIcon[i].innerHTML = 'favorite_border';
-            //     heartIcon[i].style.color = 'white';
-            // }
         }
     }
 }

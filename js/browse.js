@@ -17,15 +17,14 @@ for(let i = recipe.length-1; i > -1; i--) {
     
     productRow.insertAdjacentHTML('afterbegin', card);
 }
-console.log(window.location.hostname)
-console.log(window.location.pathname)
+
 window.addEventListener("click", function(e) {
-    const element = e.target;
-    const parentElement = element.parentElement;
-    const parentValue = parentElement.getAttribute('class')
+    const element = e.target; //e.target is the image user clicked
+    const parentElement = element.parentElement; 
+    const parentValue = parentElement.getAttribute('class') //parent is the card container
     if(parentValue === 'card') {
-        const data = parentElement.getAttribute('data-id');
-        window.location.href = 'recipeDetails.html?product=' + data;
+        const data = parentElement.getAttribute('data-id'); //get image id
+        window.location.href = 'recipeDetails.html?product=' + data; //add id in URL
     }
 });
 

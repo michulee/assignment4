@@ -14,25 +14,15 @@ class Nav extends React.Component {
       <Router>
         <main>
           <nav>
-            <ul>
-              <li>
+            <div>
                 <div className="container-img">
-                  <img src={logo} />
+                    <img src={logo} />
                 </div>
-              </li>
-              <li>
-                  <SearchBar/>
-              </li>
-              <li>
+                <SearchBar/>
                 <a href="/">Home</a>
-              </li>
-              <li>
                 <a href="/about">About</a>
-              </li>
-              <li>
                 <a href="/contact">Contact</a>
-              </li>
-            </ul>
+            </div>
           </nav>
 
           <Switch>
@@ -50,7 +40,7 @@ function SearchBar() {
     return (
         <Fragment>
             <div className="search">
-
+                
             </div>
         </Fragment>
     );

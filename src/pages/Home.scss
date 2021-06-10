@@ -1,0 +1,23 @@
+.home {
+    height: 80vh;
+    background-color: pink;
+    scroll-snap-align: start;
+}
+
+.section1 {
+    height: 80vh;
+    background-color: teal;
+    scroll-snap-align: start;
+}
+
+.section2 {
+    height: 100vh;
+    background-color: azure;
+    scroll-snap-align: start;
+}
+
+.section3 {
+    height: 100vh;
+    background-color: lavender;
+    scroll-snap-align: start;
+}

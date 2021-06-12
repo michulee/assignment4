@@ -1,6 +1,12 @@
 :root {
   --color-primary: white;
   --color-secondary: black;
+  --color-border: white;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-gray: rgba(0, 0, 0, 0.048);
+
+  --nav-padding: 20px;
 }
 
 * {
@@ -33,6 +39,7 @@ code {
 a {
   text-decoration: none;
   color: gray;
+
 }
 
 ul {
@@ -42,4 +49,9 @@ ul {
 img {
   height: 100%;
   width: 100%;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
 }

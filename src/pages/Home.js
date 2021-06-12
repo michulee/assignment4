@@ -1,22 +1,42 @@
 import { render } from "@testing-library/react";
 import React, { Fragment } from "react";
 import "./Home.scss";
+import logo from "../asset/logo.svg";
+
 
 class Home extends React.Component {
   render() {
     return (
       <Fragment>
-        <h1 className="">Cooking Cards</h1>
-        <Discover/>
-        <New/>
-        <Food/>
-        <Locations/>
+        <HeroBanner/>
+        <Feed/>
       </Fragment>
     );
   }
 }
 
-function Discover() {
+function HeroBanner() {
+    return (
+        <Fragment>
+            <div className="hero_banner">
+                <h1 className="">Cooking Cards</h1>
+                <HomeSearch/>
+            </div>
+        </Fragment>
+    );
+}
+
+function HomeSearch() {
+    return (
+        <Fragment>
+            <div className="search">
+                <div className="container-img"><img className="icon" src={logo}/></div>
+            </div>
+        </Fragment>
+    );
+}
+
+function Feed() {
     return (
         <Fragment>
             <div className="home">

@@ -1,6 +1,15 @@
+// https://code.visualstudio.com/docs/languages/jsconfig
 {
     "compilerOptions": {
       "baseUrl": "src"
     },
-    "include": ["src"]
+    "include": ["src"],
+    "exclude": [
+        "bower_components",
+        "node_modules",
+        "jspm_packages",
+        "tmp",
+        "temp",
+        "dist"
+    ]
 }

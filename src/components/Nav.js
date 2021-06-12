@@ -8,7 +8,7 @@ import Contact from "../pages/Contact.js";
 // import Login from "../pages/Login.js";
 import Login from "pages/Login";
 
-import logo from "../asset/logo.svg";
+import logo from "resources/assets/logo.svg";
 import { render } from "@testing-library/react";
 
 class Nav extends React.Component {

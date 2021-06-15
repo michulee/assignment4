@@ -13,6 +13,10 @@ import logo from "resources/assets/logo.svg";
 import { render } from "@testing-library/react";
 
 class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    
+  }
   render() {
     return (
       <nav>

@@ -21,6 +21,8 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} /> 
             {/* <Route path="/register" component={Pages} /> */}
+
+            {/* <Route path="/public" component={public} /> */}
         </Switch>
       </main>
     </Router>

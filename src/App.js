@@ -3,11 +3,11 @@ import React, { Fragment } from "react";
 import "./App.scss";
 
 import { BrowserRouter as Router, Route, Link, NavLink, Switch } from "react-router-dom";
-import Nav from "./components/Nav.js";
-import Home from "./pages/Home.js";
-import About from "./pages/About.js";
-import Contact from "./pages/Contact.js";
-import Login from "pages/Login";
+import Nav from "./shared/Nav.js";
+import Home from "./pages/Home/Home.js";
+import About from "./pages/About/About.js";
+import Contact from "./pages/Contact/Contact.js";
+import Login from "pages/Login/Login";
 
 function App() {
   return (

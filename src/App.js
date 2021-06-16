@@ -3,13 +3,13 @@ import React, { Fragment } from "react";
 import "./App.scss";
 
 import { BrowserRouter as Router, Route, Link, NavLink, Switch } from "react-router-dom";
-import Nav from "./shared/Nav.js";
+import Nav from "./components/Nav.js";
 import Home from "./pages/Home/Home.js";
 import About from "./pages/About/About.js";
 import Contact from "./pages/Contact/Contact.js";
 import Login from "pages/Login/Login";
 
-function App() {
+export default function App() {
   return (
     <Router>
       <main>
@@ -29,4 +29,3 @@ function App() {
   );
 }
 
-export default App;

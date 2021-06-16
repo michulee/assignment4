@@ -12,28 +12,22 @@ import "./Nav.scss";
 import logo from "resources/assets/logo.svg";
 import { render } from "@testing-library/react";
 
-class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-    
-  }
-  render() {
-    return (
-      <nav>
-        <div>
-          <div className="container-img">
-            <a href="/">
-              <img className="logo" src={logo} />
-            </a>
-          </div>
-          <SearchBar />
-          <NavLink activeClassName="active" to="/login">
-            Login
-          </NavLink>
+export default function Nav() {
+  return (
+    <nav>
+      <div>
+        <div className="container-img">
+          <a href="/">
+            <img className="logo" src={logo} />
+          </a>
         </div>
-      </nav>
-    );
-  }
+        <SearchBar />
+        <NavLink activeClassName="active" to="/login">
+          Login
+        </NavLink>
+      </div>
+    </nav>
+  );
 }
 
 function SearchBar() {
@@ -47,5 +41,3 @@ function SearchBar() {
     </Fragment>
   );
 }
-
-export default Nav;

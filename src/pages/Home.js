@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import React, { Fragment } from "react";
-import "./Home.scss";
-import logo from "resources/assets/logo.svg";
+import "styles/components/_Home.scss";
+import logo from "assets/logo.svg";
 
 class Home extends React.Component {
   render() {

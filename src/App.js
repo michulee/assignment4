@@ -1,13 +1,10 @@
-import logo from "resources/assets/logo.svg";
 import React, { Fragment } from "react";
-import "./App.scss";
+import 'styles/App.scss';
 
 import { BrowserRouter as Router, Route, Link, NavLink, Switch } from "react-router-dom";
-import Nav from "./components/Nav.js";
-import Home from "./pages/Home/Home.js";
-import About from "./pages/About/About.js";
-import Contact from "./pages/Contact/Contact.js";
-import Login from "pages/Login/Login";
+import Nav from "components/Header.js";
+import Home from "pages/Home.js";
+import Login from "pages/Login.js";
 
 export default function App() {
   return (
@@ -17,8 +14,6 @@ export default function App() {
         <Switch>
             {/* <Route path="*" component={NotFound} /> */}
             <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} /> 
             {/* <Route path="/register" component={Pages} /> */}
 

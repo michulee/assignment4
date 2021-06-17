@@ -7,9 +7,8 @@ import {
   Switch,
 } from "react-router-dom";
 
-import "./Nav.scss";
-
-import logo from "resources/assets/logo.svg";
+import "styles/components/_header.scss";
+import logo from "assets/logo.svg";
 import { render } from "@testing-library/react";
 
 export default function Nav() {

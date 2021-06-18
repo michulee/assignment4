@@ -1,4 +1,5 @@
-@use "../util/helpers";
+@use "util/helpers" as *;
+// @use "util/helpers";
 
 nav {
     position: sticky;
@@ -30,8 +31,7 @@ nav + .home {
 }
 
 .search {
-    background-color: var(--color-light);
-    // background-color: aquamarine;
+    background-color: $color-test2;
     border-radius: 15px;
     width: 100%;
     height: 30px;

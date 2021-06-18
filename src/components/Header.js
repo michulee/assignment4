@@ -9,6 +9,7 @@ import {
 
 import "styles/components/_header.scss";
 import logo from "assets/logo.svg";
+import {MdAccessibility} from "react-icons/fa";
 import { render } from "@testing-library/react";
 
 export default function Nav() {
@@ -34,7 +35,8 @@ function SearchBar() {
     <Fragment>
       <div className="search">
         <div className="container-img">
-          <img className="icon" src={logo} />
+          <MdAccessibility />
+          {/* <img className="icon" src={logo} /> */}
         </div>
       </div>
     </Fragment>

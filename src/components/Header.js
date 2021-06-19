@@ -9,7 +9,7 @@ import {
 
 import "styles/components/_header.scss";
 import logo from "assets/logo.svg";
-import {MdAccessibility} from "react-icons/fa";
+import {BiSearchAlt, BiDotsVerticalRounded} from "react-icons/bi";
 import { render } from "@testing-library/react";
 
 export default function Nav() {
@@ -22,6 +22,7 @@ export default function Nav() {
           </a>
         </div>
         <SearchBar />
+        <BiDotsVerticalRounded className="icon"/>
         <NavLink activeClassName="active" to="/login">
           Login
         </NavLink>
@@ -35,7 +36,7 @@ function SearchBar() {
     <Fragment>
       <div className="search">
         <div className="container-img">
-          <MdAccessibility />
+          <BiSearchAlt className="icon" />
           {/* <img className="icon" src={logo} /> */}
         </div>
       </div>

@@ -1,0 +1,43 @@
+// @use "util/helpers";
+@use "util/helpers";
+
+
+.container {
+    background-color: pink;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.30);
+}
+
+.container_img {
+}
+
+.img {
+    display: block;
+    object-fit: cover;
+    min-height: 300px;
+    max-height: 500px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: helpers.$color-dark;
+    color: helpers.$color-light;
+    padding: 0 10px;
+}
+
+.toolbar > * {
+    display: flex;
+    color: helpers.$color-gray-dark;
+}
+
+.text {
+    font-size: 1.4em;
+}
+
+.icon {
+    font-size: 2em;
+}
